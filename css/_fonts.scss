@@ -1,0 +1,66 @@
+@mixin breakpoint($point) {
+	@media only screen and (min-width: $point) {
+		@content;
+	}
+}
+
+html {
+	font-size: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, li, div {
+	font-family: "proxima-nova",sans-serif;
+	color: #777;
+}
+
+i {
+	font-style: italic;
+}
+
+h1 {
+	font-family: "proxima-nova", sans-serif;
+	color: #2DB671;
+	font-size: 1.5em;
+	line-height: 1.1em;
+	font-weight: 700;
+	font-style: normal;
+}
+
+h2 {
+	color: #777;
+	font-size: 0.875em;
+	font-weight: 700;
+	font-style: normal;
+	opacity: 0.8;
+}
+
+p {
+	font-size: 1.0em;
+	font-weight: 300;
+	font-style: normal;
+	line-height: 1.6em;
+	a {
+		text-decoration: none;
+		border-bottom: 1px dotted;
+		color: #2DB671;
+		&:hover {
+			color: rgba(0, 185, 106, 0.6);
+			text-decoration: none;
+			cursor: pointer;
+		}
+	}
+}
+
+strong {
+	font-weight: 700;
+}
+
+h3, h4, h5, h6 {
+	font-weight: 400; 
+}
+
+span {
+	font-family: "proxima-nova",sans-serif;
+	font-weight: 700;
+	color: #777;
+}

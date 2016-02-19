@@ -1,0 +1,17 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Francis Nguyen -- Developer & Designer
+
+# THANKS
+
+    Julia Solano, Denise Zhang, Marissa Ho, Stephen Ramirez 
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    jQuery, Modernizr, Bootstrap
+
+
