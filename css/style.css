@@ -577,7 +577,12 @@ $OVERLAY
       text-align: center;
       font-style: italic;
       font-size: 0.75em;
-      padding: 0; }
+      padding: 0;
+      -webkit-transform: translateY(10px);
+      -moz-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+      -o-transform: translateY(10px);
+      transform: translateY(10px); }
     .project-info .img-container .sw-old {
       padding-left: 7px;
       padding-right: 0px;
