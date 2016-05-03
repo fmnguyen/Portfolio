@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Francis Nguyen</title>
+    <title>Francis Nguyen - Portfolio</title>
     <meta property="og:title" content="Portfolio - Francis Nguyen" />
     <meta property="og:image" content="/img/francis-desk.png"/>
     <meta property="og:description" content="Francis Nguyen is a Front-End Web-Developer and learning Designer interested in education technology and data visualization." />
@@ -60,14 +60,14 @@
         <div class="project-row row">
             <div class="project-card child-left col-xs-12 col-sm-6 fadeInUp delay2 animated">
                 <h2>development</h2>
-                <a class="overlay-toggle" href="#healthvis"><h1 class="card-title">Health Indicator Report</h1></a>
+                <a class="overlay-toggle" href="#radius"><h1 class="card-title">Radius</h1></a>
                 <div class="img-wrp">
-                    <a class="overlay-toggle" href="#healthvis">
-                        <img src="img/healthvis/example.png"/>
+                    <a class="overlay-toggle" href="#radius">
+                        <img src="img/radius/10-1.jpg"/>
                     </a>
                 </div>
-                <p class="card-description">Scraping, analyzing and visualizing a dataset with R and D3.js to explore questions about Urbanization and Health Indicators in various countries.</p>
-                <a class="more-arrow overlay-toggle" href="#healthvis">→</a>
+                <p class="card-description">Builidng a concept re-branding of a familiar 90's children toy. UI-Engineering for a re-design of Skip-it for highly athletic young adults.</p>
+                <a class="more-arrow overlay-toggle" href="#radius">→</a>
             </div>
             <div class="project-card child-right col-xs-12 col-sm-6 fadeInUp delay2 animated">
                 <h2>design • development</h2>
@@ -104,6 +104,19 @@
                 </div>
                 <p class="card-description">Live multiplayer game where players navigate ships around a central star's gravity well and try to shoot down other players. Placed at <a href="https://www.facebook.com/events/780426148649298/" target="_blank">Facebook Hackathon Seattle</a>.</p>
                 <a class="more-arrow overlay-toggle" href="#spacewar">→</a>
+            </div>
+        </div>
+        <div class="project-row row fadeInUp delay2 animated">
+            <div class="project-card child-left col-xs-12 col-sm-6">
+                <h2>development</h2>
+                <a class="overlay-toggle" href="#healthvis"><h1 class="card-title">Health Indicator Report</h1></a>
+                <div class="img-wrp">
+                    <a class="overlay-toggle" href="#healthvis">
+                        <img src="img/healthvis/example.png"/>
+                    </a>
+                </div>
+                <p class="card-description">Analyzing and visualizing a dataset with R and D3.js to explore questions about Urbanization and Health Indicators in various countries.</p>
+                <a class="more-arrow overlay-toggle" href="#healthvis">→</a>
             </div>
         </div>
     </div>
@@ -186,17 +199,17 @@
             </div>
             <div class="about-card right-about col-xs-12 col-sm-6 col-md-4"> 
                 <div class="about-caption">I am currently reading</div>
-                <div class="about-content">We Are All Stardust</div>
+                <div class="about-content">Algorithms to Live By</div>
                 <div class="about-icon"><img src="./img/icons/book.svg"></div>
             </div>
             <div class="about-card about-long hidden-xs col-sm-12 col-md-8"> 
-                <div class="about-caption">My favorite bay area food spots</div>
+                <div class="about-caption">My favorite Seattle food spots</div>
                 <ul class="about-content-long">
-                    <li>Kiraku</li>
-                    <li>Ippuku</li>
-                    <li>Cheeseboard</li>
-                    <li>900 Grayson</li>
-                    <li>Saint Frank</li>
+                    <li>Japonessa</li>
+                    <li>Morsel</li>
+                    <li>Slate Coffee</li>
+                    <li>Skillet Diner</li>
+                    <li></li>
                 </ul>
                 <div class="about-icon"><img src="./img/icons/dinner.svg"></div>
             </div>
@@ -366,7 +379,7 @@
                 <div class="project-header col-xs-12">
                     <div class="header-left">
                         <h1 class="header-title">Health Indicator Report</h1>
-                        <p>Scraping, analyzing and visualizing a dataset with R and D3.js to explore questions about Urbanization and Health Indicators in various countries.</p>
+                        <p>Analyzing and visualizing a dataset with R and D3.js to explore questions about Urbanization and Health Indicators in various countries.</p>
                     </div>
                     <div class="header-right">
                         <h2>When</h2>
@@ -378,13 +391,13 @@
                     </div>
                 </div>
                 <div class="project-info col-sm-10 col-sm-offset-1">
-                    <p>Mortality rates, access to affordable healthcare, gross national income (GNI), and the enrollment rates of tertiary education facilities are very important to the welfare of a state, but how much do these indicators vary in developed versus developing nations? Working with 3 other students, we chose to investigate this question further by looking at data from the World Databank. Specifically, data was gathered from 10 different countries - 5 developed and 5 developing, and we tracked 9 indicators, including Total Urban/Rural population, mortality rates, and GNI.</p>
-                    <p>When first coming across the massive dataset, the first thing on my agenda was to get comfortable with the data. It was crucial to know what data was missing, which indicators were necessary, and how to approach the data. I then proceeded to scrub the data of null values as they would affect statistical tests, and organized the data into separate CSV files for each country and into one large master dataset. I imported them all into R to run both general statistical summaries and correlation tests. I then took each of the indicators and plotted the correlation matrices between each of them.</p>
+                    <p>Mortality rates, access to affordable healthcare, gross national income (GNI), and the enrollment rates of tertiary education facilities are very important to the welfare of a state, but how much do these indicators vary in developed versus developing nations? Working on this project with 3 other students, we chose to investigate this question further by looking at data from the World Databank. Specifically, data was gathered from 10 different countries - 5 developed and 5 developing, and we tracked 9 indicators, including Total Urban/Rural population, mortality rates, and GNI.</p>
+                    <p>When first coming across the massive dataset, the first thing on the agenda was to get comfortable with the data. It was crucial to know what data was missing, which indicators were necessary, and how to approach the data. We proceeded to scrub the data of null values as they would affect statistical tests, and organized the data into separate CSV files for each country and into one large master dataset. I imported them all into R to run both general statistical summaries and correlation tests. We then took each of the indicators and plotted the correlation matrices between each of them.</p>
                     <div class="img-container">
                         <img class="full-width" src="./img/healthvis/healthintrocopy.png"/>
                         <img class="full-width" src="./img/healthvis/secondimg.jpg"/>
                     </div>
-                    <p>For the generation of initial exploratory charts, I found that keeping the relevant countries in a master dataset was a more effective method for generating charts. By adding extra contextual information like the country name as well as whether it was developed or undeveloped, it was easier to visualize the categorical differences in the data. Eventually, in an attempt to make the data exploration more accessible to viewers, I ported the visualizations onto the web using D3.js.</p>
+                    <p>For the rendering of initial exploratory charts, I found that keeping the relevant countries in a master dataset was a more effective method for generating charts. By adding extra contextual information like the country name as well as whether it was developed or undeveloped, it was easier to visualize the categorical differences in the data. Eventually, in an attempt to make the data exploration more accessible to viewers, I created interactive charts that could be viewed online using D3.js.</p>
                     <div class="img-container">
                         <img class="full-width" src="./img/healthvis/example.png"/>
                     </div>
