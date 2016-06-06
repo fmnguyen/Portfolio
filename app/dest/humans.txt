@@ -7,11 +7,11 @@
 
 # THANKS
 
-    Julia Solano, Denise Zhang, Marissa Ho, Stephen Ramirez 
+    Holden Stegman, Alice Yan, Jessica Hullman, Denise Zhang, Marissa Ho, Julia Solano,
 
 # TECHNOLOGY COLOPHON
 
     CSS3, HTML5
-    jQuery, Modernizr, Bootstrap
+    jQuery, Modernizr, Bootstrap, Gulp
 
 

@@ -14,6 +14,7 @@ ANIMATIONS
 
 */
 
+@import 'bootstrap';
 @import 'reset';
 @import 'fonts';
 
@@ -190,8 +191,8 @@ section {
 
 		// Gradient Animation behind text 
 		p, span {
-			background: -webkit-linear-gradient(right, #00b96a, #c3eac7);
-			background: linear-gradient(right, #00b96a, #c3eac7);
+			background: -webkit-linear-gradient(to right, #00b96a, #c3eac7);
+			background: linear-gradient(to right, #00b96a, #c3eac7);
 			background-size: 200% 200%;
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
@@ -405,7 +406,7 @@ $ABOUT
 
 */
 .about-img {
-	background: url("../img/sweaters.gif") no-repeat;
+	background: url("../assets/images/sweaters.gif") no-repeat;
 	height: 300px;
 	width: 300px;
 	border-radius: 150px;
@@ -460,7 +461,7 @@ $ABOUT
 
 .about-desk {
 	height: 240px;
-	background: url('../img/francis-desk.png') no-repeat center;
+	background: url('../assets/images/francis-desk.png') no-repeat center;
 	background-size: contain;
 }
 
