@@ -17,16 +17,16 @@ var AUTOPREFIXER_BROWSERS = [
 
 // ### Sources / Destinations
 var src = {
-  js: ['app/src/js/*.js'],
-  js_vendor: 'app/src/js/vendor/*.js',
-  scss: 'app/src/**/*.scss',
-  scss_index: 'app/src/css/style.scss',
-  img: 'app/img/**/**.**'
+  js: ['/src/js/*.js'],
+  js_vendor: '/src/js/vendor/*.js',
+  scss: '/src/**/*.scss',
+  scss_index: '/src/css/style.scss',
+  img: '/img/**/**.**'
 };
 var dest = {
-  js: 'app/dest/js',
-  css: 'app/dest/css',
-  img: 'app/dest/assets/images'
+  js: '/dest/js',
+  css: '/dest/css',
+  img: '/dest/assets/images'
 };
 
 // ## Environment
@@ -95,7 +95,7 @@ gulp.task('serve', function() {
   browserSync.init({
     ghostMode: false,
     server: {
-      baseDir: './app/dest',
+      baseDir: './',
       open: true
     },
     port: 3001
