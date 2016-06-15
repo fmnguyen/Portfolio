@@ -17,16 +17,16 @@ var AUTOPREFIXER_BROWSERS = [
 
 // ### Sources / Destinations
 var src = {
-  js: ['/src/js/*.js'],
-  js_vendor: '/src/js/vendor/*.js',
-  scss: '/src/**/*.scss',
-  scss_index: '/src/css/style.scss',
-  img: '/img/**/**.**'
+  js: 'src/js/*.js',
+  js_vendor: 'src/js/vendor/*.js',
+  scss: 'src/**/*.scss',
+  scss_index: 'src/css/style.scss',
+  img: 'img/**/**.**'
 };
 var dest = {
-  js: '/dest/js',
-  css: '/dest/css',
-  img: '/dest/assets/images'
+  js: 'dest/js',
+  css: 'dest/css',
+  img: 'dest/assets/images'
 };
 
 // ## Environment
@@ -41,12 +41,12 @@ var env = {
 
 // checks for production environment for gulpif()
 gulp.task('env:dev', function(cb){
-    process.env.NODE_ENV = 'dev'
+    process.env.NODE_ENV = 'dev';
     cb(); /// ### this lets gulp know that this task is done
 })
 
 gulp.task('env:prod', function(cb){
-    process.env.NODE_ENV = 'prod'
+    process.env.NODE_ENV = 'prod';
     cb(); /// ### this lets gulp know that this task is done
 })
 
@@ -71,18 +71,18 @@ gulp.task('js', function(){
         .pipe(browserSync.reload({stream: true}));
 })
 
-gulp.task('css', function(){
+gulp.task('css', function() {
     gulp.src(src.scss_index)
         .pipe($.if(env.dev(), $.plumber()))
         .pipe($.if(env.dev(), $.sourcemaps.init()))
         .pipe($.if(env.dev(), $.sass().on('error', $.sass.logError)))
         .pipe($.if(env.prod(), $.sass({ outputStyle: 'compressed' })))
         .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
-        .pipe($.cssnano())
+        .pipe($.if(env.prod(), $.cssnano()))
         .pipe($.rename('style.min.css'))
         .pipe($.if(env.dev(), $.sourcemaps.write('./')))
         .pipe(gulp.dest(dest.css))
-        .pipe(browserSync.reload({stream: true}));
+        .pipe(browserSync.stream());
 })
 
 gulp.task('img', function(){
@@ -105,7 +105,7 @@ gulp.task('serve', function() {
 // ## Main tasks
 
 // Build tasks
-gulp.task('build', ['js', 'css', 'img']);
+gulp.task('build', ['js', 'css']);
 gulp.task('build:dev', function(cb){
     runSequence('env:dev', 'build', cb);
 });
@@ -117,7 +117,7 @@ gulp.task('build:prod', function(cb) {
 gulp.task('watch', function() {
     gulp.watch(src.scss, ['css']);
     gulp.watch(src.js, ['js']);
-    gulp.watch(src.img, ['img']);
+    //gulp.watch(src.img, ['img']);
 })
 
 // Default tasks
