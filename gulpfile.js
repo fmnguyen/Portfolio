@@ -106,7 +106,7 @@ gulp.task('serve', function() {
 
 // Build tasks
 gulp.task('build', ['js', 'css']);
-gulp.task('build:dev', function(cb){
+gulp.task('build:dev', function(cb) {
     runSequence('env:dev', 'build', cb);
 });
 gulp.task('build:prod', function(cb) {

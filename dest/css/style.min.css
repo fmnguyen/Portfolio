@@ -5869,11 +5869,12 @@ $OVERLAY
     text-transform: uppercase;
     letter-spacing: 2.0px;
     font-size: 1.5em;
-    margin-top: 30px; }
+    margin-top: 30px;
+    padding-bottom: 15px; }
   .project-info p {
     color: #777;
     font-weight: 300;
-    padding: 15px 0; }
+    padding: 10px 0; }
   .project-info .img-container {
     padding: 15px 0; }
     .project-info .img-container .full-width {
