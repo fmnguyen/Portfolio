@@ -53,7 +53,7 @@ gulp.task('env:prod', function(cb){
 // ## Subtasks (scripts, css, img)
 gulp.task('js', function(){
     gulp.src(src.js)
-        // .pipe($.jshint())
+        // .pipe($.jshint())  // can't be bothered with jshint-ing rn
         // .pipe($.jshint.reporter('default'))
         .pipe($.if(env.dev(), $.sourcemaps.init({loadMaps: true})))
         .pipe($.concat('main.js'))
