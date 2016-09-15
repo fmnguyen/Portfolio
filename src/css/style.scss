@@ -61,6 +61,7 @@ $black: #777;
 
 $light_gray: #e8e8e8;
 $light_gray_opaque: rgba(232, 232, 232, 0.5);
+$header_gray: #ABA9B3;
 $dark_gray: #ecf0f1;
 $darker_gray: #414141;
 
@@ -182,11 +183,18 @@ section {
 		p {
 			color: $green;
 			font-size: 15px;
+			font-family: "niveau-grotesk";
+			font-weight: 700;
+			opacity: 0.7;
 		}
 		span {
 			font-size: 30px;
 			vertical-align: middle;
 			color: $green;
+			letter-spacing: 2px;
+			font-family: "kepler-std-display";
+			font-weight: 700; 
+			opacity: 0.85;
 		}
 
 		// Gradient Animation behind text 
@@ -273,7 +281,7 @@ $PROJECTCARDS
 		.card-title { 
 			margin-top: 10px;
 			font-size: 1.875em;
-			letter-spacing: 0.5px;
+			letter-spacing: 0.6px;
 			&:hover, &:focus {
 				color: rgba(45,182,113, 0.5);
 			}
@@ -282,6 +290,12 @@ $PROJECTCARDS
 		&:hover, &:active {text-decoration: none;}
 
 
+	}
+	h2 {
+		font-family: "kepler-std-display", Garamond, serif;
+		font-weight: 700;
+		letter-spacing: 0.8px;
+		color: $header_gray;
 	}
 	.card-description {
 		padding-bottom: 20px;
@@ -433,16 +447,19 @@ $ABOUT
 		background: rgba(232, 232, 232, 0.3);
 		div {display: block;}
 		.about-caption {
-			color: #777;
+			color: $header_gray;
 			opacity: 0.8;
 			font-size: 0.875em;
-			text-transform: uppercase;
-			margin-bottom: 20px;
+			font-family: "kepler-std-display", Garamond, serif;
+			text-transform: lowercase;
+			margin-bottom: 8px;
+			padding-top: 10px;
 			font-weight: 700;
-			letter-spacing: 0.5px;
+			letter-spacing: 0.6px;
 		}
 		.about-content {
 			color: $green;
+			font-weight: 700;
 			font-size: 1.5em;
 		}
 		.about-icon {
@@ -474,6 +491,7 @@ $ABOUT
 		padding: 5px 15px 0 15px;
 		color: $green;
 		font-size: 1.125em;
+		font-weight: 700;
 		a {
 			text-decoration: none;
 			border-bottom: 1px dotted;
@@ -579,19 +597,17 @@ $OVERLAY
 		text-align: center;
 		display: block;
 		width: 100%;
-		h2 { font-size: 1em;}
+		h2 { font-size: 1em; color: #ABA9B3; }
 	}
 }
 .project-info {
 	@extend .clearfix;
 	display: inline-block;
 	h2 {
-		color: $green;
-		text-transform: uppercase;
+		color: $header_gray;
 		letter-spacing: 2.0px;
 		font-size: 1.5em;
 		margin-top: 30px;
-		padding-bottom: 15px
 	}
 	p {
 		color: #777;

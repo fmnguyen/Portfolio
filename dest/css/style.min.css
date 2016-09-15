@@ -5409,14 +5409,14 @@ html {
   font-size: 100%; }
 
 h1, h2, h3, h4, h5, h6, p, a, li, div {
-  font-family: "niveau-grotesk",sans-serif;
-  color: #777; }
+  font-family: "niveau-grotesk", Helvetica, Arial, sans-serif;
+  color: #888; }
 
 i {
   font-style: italic; }
 
 h1 {
-  font-family: "niveau-grotesk", sans-serif;
+  font-family: "niveau-grotesk", Helvetica, Arial, sans-serif;
   color: #2DB671;
   font-size: 1.5em;
   line-height: 1.1em;
@@ -5424,11 +5424,13 @@ h1 {
   font-style: normal; }
 
 h2 {
-  color: #777;
+  color: #888;
+  font-family: "kepler-std-display", Garamond, serif;
   font-size: 0.875em;
   font-weight: 700;
   font-style: normal;
-  opacity: 0.8; }
+  opacity: 0.8;
+  letter-spacing: 0.6px; }
 
 p {
   font-size: 1.0em;
@@ -5451,9 +5453,9 @@ h3, h4, h5, h6 {
   font-weight: 400; }
 
 span {
-  font-family: "niveau-grotesk",sans-serif;
+  font-family: "kepler-std-display", Garamond, serif;
   font-weight: 700;
-  color: #777; }
+  color: #888; }
 
 /* Clearfix */
 .clearfix, .clearfix:before, .clearfix:after, .nav-bar, .nav-bar .nav-bar-item, .row, .project-row, .project-content, .project-content .project-header, .project-info, .project-info .img-container, .overlay-fade, .overlay-fade .overlay .project-overlay-row {
@@ -5557,11 +5559,18 @@ section {
       padding: 10px 0; }
     .cover-wrapper .cover p {
       color: #2DB671;
-      font-size: 15px; }
+      font-size: 15px;
+      font-family: "niveau-grotesk";
+      font-weight: 700;
+      opacity: 0.7; }
     .cover-wrapper .cover span {
       font-size: 30px;
       vertical-align: middle;
-      color: #2DB671; }
+      color: #2DB671;
+      letter-spacing: 2px;
+      font-family: "kepler-std-display";
+      font-weight: 700;
+      opacity: 0.85; }
     .cover-wrapper .cover p, .cover-wrapper .cover span {
       background: linear-gradient(to right, #00b96a, #c3eac7);
       background-size: 200% 200%;
@@ -5626,13 +5635,18 @@ $PROJECTCARDS
   .project-card a .card-title {
     margin-top: 10px;
     font-size: 1.875em;
-    letter-spacing: 0.5px; }
+    letter-spacing: 0.6px; }
     .project-card a .card-title:hover, .project-card a .card-title:focus {
       color: rgba(45, 182, 113, 0.5); }
     .project-card a .card-title:focus {
       text-decoration: underline; }
   .project-card a:hover, .project-card a:active {
     text-decoration: none; }
+  .project-card h2 {
+    font-family: "kepler-std-display", Garamond, serif;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: #ABA9B3; }
   .project-card .card-description {
     padding-bottom: 20px; }
   .project-card .img-wrp {
@@ -5744,15 +5758,18 @@ $ABOUT
     .about-row .about-card div {
       display: block; }
     .about-row .about-card .about-caption {
-      color: #777;
+      color: #ABA9B3;
       opacity: 0.8;
       font-size: 0.875em;
-      text-transform: uppercase;
-      margin-bottom: 20px;
+      font-family: "kepler-std-display", Garamond, serif;
+      text-transform: lowercase;
+      margin-bottom: 8px;
+      padding-top: 10px;
       font-weight: 700;
-      letter-spacing: 0.5px; }
+      letter-spacing: 0.6px; }
     .about-row .about-card .about-content {
       color: #2DB671;
+      font-weight: 700;
       font-size: 1.5em; }
     .about-row .about-card .about-icon {
       float: right;
@@ -5777,7 +5794,8 @@ $ABOUT
     display: inline;
     padding: 5px 15px 0 15px;
     color: #2DB671;
-    font-size: 1.125em; }
+    font-size: 1.125em;
+    font-weight: 700; }
     .about-content-long li a {
       text-decoration: none;
       border-bottom: 1px dotted;
@@ -5860,17 +5878,16 @@ $OVERLAY
     display: block;
     width: 100%; }
     .project-content .header-right h2 {
-      font-size: 1em; }
+      font-size: 1em;
+      color: #ABA9B3; }
 
 .project-info {
   display: inline-block; }
   .project-info h2 {
-    color: #2DB671;
-    text-transform: uppercase;
+    color: #ABA9B3;
     letter-spacing: 2.0px;
     font-size: 1.5em;
-    margin-top: 30px;
-    padding-bottom: 15px; }
+    margin-top: 30px; }
   .project-info p {
     color: #777;
     font-weight: 300;

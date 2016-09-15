@@ -219,6 +219,10 @@ $(document).ready(function() {
     }
 
 });
+
+$(window).load(function() {
+    toggleNavigation(false);    
+});
 // Avoid `console` errors in browsers that lack a console.
 (function() {
     var method;

@@ -9,8 +9,8 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6, p, a, li, div {
-	font-family: "niveau-grotesk",sans-serif;
-	color: #777;
+	font-family: "niveau-grotesk", Helvetica, Arial, sans-serif;
+	color: #888;
 }
 
 i {
@@ -18,7 +18,7 @@ i {
 }
 
 h1 {
-	font-family: "niveau-grotesk", sans-serif;
+	font-family: "niveau-grotesk", Helvetica, Arial, sans-serif;
 	color: #2DB671;
 	font-size: 1.5em;
 	line-height: 1.1em;
@@ -27,11 +27,13 @@ h1 {
 }
 
 h2 {
-	color: #777;
+	color: #888;
+	font-family: "kepler-std-display", Garamond, serif;
 	font-size: 0.875em;
 	font-weight: 700;
 	font-style: normal;
 	opacity: 0.8;
+	letter-spacing: 0.6px;
 }
 
 p {
@@ -60,7 +62,7 @@ h3, h4, h5, h6 {
 }
 
 span {
-	font-family: "niveau-grotesk",sans-serif;
+	font-family: "kepler-std-display", Garamond, serif;
 	font-weight: 700;
-	color: #777;
+	color: #888;
 }

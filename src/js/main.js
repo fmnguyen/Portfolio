@@ -219,3 +219,7 @@ $(document).ready(function() {
     }
 
 });
+
+$(window).load(function() {
+    toggleNavigation(false);    
+});
