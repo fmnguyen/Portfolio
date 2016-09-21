@@ -92,7 +92,7 @@ $radius: 25px;
 		position: relative;
 		a {
 			display: block;
-			font-family: "niveau-grotesk",sans-serif;
+			font-family: "niveau-grotesk", "Helvetica-Neue", Helvetica, sans-serif;
 			font-weight: 700;
 			font-size: 12px;
 			color: $black;
@@ -183,7 +183,7 @@ section {
 		p {
 			color: $green;
 			font-size: 15px;
-			font-family: "niveau-grotesk";
+			font-family: "niveau-grotesk", "Helvetica-Neue", Helvetica, sans-serif;
 			font-weight: 700;
 			opacity: 0.7;
 		}
@@ -192,7 +192,7 @@ section {
 			vertical-align: middle;
 			color: $green;
 			letter-spacing: 2px;
-			font-family: "kepler-std-display";
+			font-family: "kepler-std-display", Garamond, serif;
 			font-weight: 700; 
 			opacity: 0.85;
 		}
@@ -279,7 +279,7 @@ $PROJECTCARDS
 	margin-bottom: 20px;
 	a {
 		.card-title { 
-			margin-top: 10px;
+			margin-top: 8px;
 			font-size: 1.875em;
 			letter-spacing: 0.6px;
 			&:hover, &:focus {
@@ -292,7 +292,7 @@ $PROJECTCARDS
 
 	}
 	h2 {
-		font-family: "kepler-std-display", Garamond, serif;
+		font-family: "niveau-grotesk", 'Helvetica-Neue', Helvetica, sans-serif;
 		font-weight: 700;
 		letter-spacing: 0.8px;
 		color: $header_gray;
@@ -605,14 +605,23 @@ $OVERLAY
 		text-align: center;
 		display: block;
 		width: 100%;
-		h2 { font-size: 1em; color: #ABA9B3; }
+		h2 { 
+			font-size: 0.825em; 
+			color: $header_gray; 
+			text-transform: lowercase;
+		}
+		p { 
+			font-family: "kepler-std-display", Garamond, serif;
+			letter-spacing: 0.8px;
+		}
 	}
 }
 .project-info {
 	@extend .clearfix;
 	display: inline-block;
 	h2 {
-		color: $header_gray;
+		font-family: "kepler-std-display", Garamond, serif;
+		color: $green;
 		letter-spacing: 2.0px;
 		font-size: 1.5em;
 		margin-top: 30px;
@@ -759,7 +768,7 @@ $OVERLAY
 			p{font-size: 1em;}
 		}
 		.header-right {
-			h2 {font-size: 1.125em;}
+			h2 {font-size: 0.875em;}
 		}
 	}
 }

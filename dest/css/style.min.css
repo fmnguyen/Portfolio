@@ -5416,16 +5416,17 @@ i {
   font-style: italic; }
 
 h1 {
-  font-family: "niveau-grotesk", Helvetica, Arial, sans-serif;
+  font-family: "kepler-std-display", Garamond, serif;
   color: #2DB671;
   font-size: 1.5em;
   line-height: 1.1em;
   font-weight: 700;
-  font-style: normal; }
+  font-style: normal;
+  letter-spacing: 1.5px; }
 
 h2 {
   color: #888;
-  font-family: "kepler-std-display", Garamond, serif;
+  font-family: "niveau-grotesk", Helvetica, Arial, sans-serif;
   font-size: 0.875em;
   font-weight: 700;
   font-style: normal;
@@ -5493,7 +5494,7 @@ $NAVIGATION
     position: relative; }
     .nav-bar .nav-bar-item a {
       display: block;
-      font-family: "niveau-grotesk",sans-serif;
+      font-family: "niveau-grotesk", "Helvetica-Neue", Helvetica, sans-serif;
       font-weight: 700;
       font-size: 12px;
       color: #777;
@@ -5560,7 +5561,7 @@ section {
     .cover-wrapper .cover p {
       color: #2DB671;
       font-size: 15px;
-      font-family: "niveau-grotesk";
+      font-family: "niveau-grotesk", "Helvetica-Neue", Helvetica, sans-serif;
       font-weight: 700;
       opacity: 0.7; }
     .cover-wrapper .cover span {
@@ -5568,7 +5569,7 @@ section {
       vertical-align: middle;
       color: #2DB671;
       letter-spacing: 2px;
-      font-family: "kepler-std-display";
+      font-family: "kepler-std-display", Garamond, serif;
       font-weight: 700;
       opacity: 0.85; }
     .cover-wrapper .cover p, .cover-wrapper .cover span {
@@ -5633,7 +5634,7 @@ $PROJECTCARDS
   margin-top: 20px;
   margin-bottom: 20px; }
   .project-card a .card-title {
-    margin-top: 10px;
+    margin-top: 8px;
     font-size: 1.875em;
     letter-spacing: 0.6px; }
     .project-card a .card-title:hover, .project-card a .card-title:focus {
@@ -5643,7 +5644,7 @@ $PROJECTCARDS
   .project-card a:hover, .project-card a:active {
     text-decoration: none; }
   .project-card h2 {
-    font-family: "kepler-std-display", Garamond, serif;
+    font-family: "niveau-grotesk", 'Helvetica-Neue', Helvetica, sans-serif;
     font-weight: 700;
     letter-spacing: 0.8px;
     color: #ABA9B3; }
@@ -5886,13 +5887,18 @@ $OVERLAY
     display: block;
     width: 100%; }
     .project-content .header-right h2 {
-      font-size: 1em;
-      color: #ABA9B3; }
+      font-size: 0.825em;
+      color: #ABA9B3;
+      text-transform: lowercase; }
+    .project-content .header-right p {
+      font-family: "kepler-std-display", Garamond, serif;
+      letter-spacing: 0.8px; }
 
 .project-info {
   display: inline-block; }
   .project-info h2 {
-    color: #ABA9B3;
+    font-family: "kepler-std-display", Garamond, serif;
+    color: #2DB671;
     letter-spacing: 2.0px;
     font-size: 1.5em;
     margin-top: 30px; }
@@ -6006,7 +6012,7 @@ $OVERLAY
   .project-content .header-left p {
     font-size: 1em; }
   .project-content .header-right h2 {
-    font-size: 1.125em; } }
+    font-size: 0.875em; } }
 
 /* 
 
