@@ -434,6 +434,8 @@ $ABOUT
 	h1 {
 		font-size: 21px;
 		text-align: center;
+		font-family: "kepler-std-display", Garamond, serif;
+		letter-spacing: 1.5px;
 	}
 }
 
@@ -450,7 +452,7 @@ $ABOUT
 			color: $header_gray;
 			opacity: 0.8;
 			font-size: 0.875em;
-			font-family: "kepler-std-display", Garamond, serif;
+			font-family: "niveau-grotesk", 'Helvetica-Neue', Helvetica, sans-serif;
 			text-transform: lowercase;
 			margin-bottom: 8px;
 			padding-top: 10px;
@@ -461,6 +463,8 @@ $ABOUT
 			color: $green;
 			font-weight: 700;
 			font-size: 1.5em;
+			font-family: "kepler-std-display", Garamond, serif;
+			letter-spacing: 1.7px;
 		}
 		.about-icon {
 			float: right;
@@ -492,10 +496,14 @@ $ABOUT
 		color: $green;
 		font-size: 1.125em;
 		font-weight: 700;
+		font-family: "kepler-std-display", Garamond, serif;
+		letter-spacing: 0.8px;
 		a {
 			text-decoration: none;
 			border-bottom: 1px dotted;
 			color: #2DB671;
+			font-family: "kepler-std-display", Garamond, serif;
+			letter-spacing: 0.8px;
 			&:hover {
 				color: rgba(0, 185, 106, 0.6);
 				text-decoration: none;

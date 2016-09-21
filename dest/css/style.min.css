@@ -5745,7 +5745,9 @@ $ABOUT
 
 .about-desc h1 {
   font-size: 21px;
-  text-align: center; }
+  text-align: center;
+  font-family: "kepler-std-display", Garamond, serif;
+  letter-spacing: 1.5px; }
 
 .about-row {
   margin-top: 35px; }
@@ -5761,7 +5763,7 @@ $ABOUT
       color: #ABA9B3;
       opacity: 0.8;
       font-size: 0.875em;
-      font-family: "kepler-std-display", Garamond, serif;
+      font-family: "niveau-grotesk", 'Helvetica-Neue', Helvetica, sans-serif;
       text-transform: lowercase;
       margin-bottom: 8px;
       padding-top: 10px;
@@ -5770,7 +5772,9 @@ $ABOUT
     .about-row .about-card .about-content {
       color: #2DB671;
       font-weight: 700;
-      font-size: 1.5em; }
+      font-size: 1.5em;
+      font-family: "kepler-std-display", Garamond, serif;
+      letter-spacing: 1.7px; }
     .about-row .about-card .about-icon {
       float: right;
       opacity: 0.12;
@@ -5795,11 +5799,15 @@ $ABOUT
     padding: 5px 15px 0 15px;
     color: #2DB671;
     font-size: 1.125em;
-    font-weight: 700; }
+    font-weight: 700;
+    font-family: "kepler-std-display", Garamond, serif;
+    letter-spacing: 0.8px; }
     .about-content-long li a {
       text-decoration: none;
       border-bottom: 1px dotted;
-      color: #2DB671; }
+      color: #2DB671;
+      font-family: "kepler-std-display", Garamond, serif;
+      letter-spacing: 0.8px; }
       .about-content-long li a:hover {
         color: rgba(0, 185, 106, 0.6);
         text-decoration: none;
