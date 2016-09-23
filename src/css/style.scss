@@ -94,8 +94,8 @@ $radius: 25px;
 			display: block;
 			font-family: "niveau-grotesk", "Helvetica-Neue", Helvetica, sans-serif;
 			font-weight: 700;
-			font-size: 12px;
-			color: $black;
+			font-size: 15px;
+			color: $header_gray;
 
 	   		transition: all 0.2s ease;
 			-moz-transition: all 0.2s ease;
@@ -185,7 +185,7 @@ section {
 			font-size: 15px;
 			font-family: "niveau-grotesk", "Helvetica-Neue", Helvetica, sans-serif;
 			font-weight: 700;
-			opacity: 0.7;
+			//opacity: 0.7;
 		}
 		span {
 			font-size: 30px;
@@ -194,7 +194,7 @@ section {
 			letter-spacing: 2px;
 			font-family: "kepler-std-display", Garamond, serif;
 			font-weight: 700; 
-			opacity: 0.85;
+			//opacity: 0.85;
 		}
 
 		// Gradient Animation behind text 
@@ -272,6 +272,7 @@ $PROJECTCARDS
 	@extend .clearfix;
 	margin-top: 10px;
 	margin-bottom: 10px;
+	@media (min-width: 768px) { margin: 45px auto; }
 }
 
 .project-card {
@@ -279,9 +280,11 @@ $PROJECTCARDS
 	margin-bottom: 20px;
 	a {
 		.card-title { 
-			margin-top: 8px;
-			font-size: 1.875em;
-			letter-spacing: 0.6px;
+			margin-top: 8px; 
+			margin-bottom: 3px;
+			font-size: 1.625em;
+			letter-spacing: 1.2px;
+			@media (min-width:768px) {font-size: 1.65em;}
 			&:hover, &:focus {
 				color: rgba(45,182,113, 0.5);
 			}
@@ -296,6 +299,7 @@ $PROJECTCARDS
 		font-weight: 700;
 		letter-spacing: 0.8px;
 		color: $header_gray;
+		margin-bottom: 15px;
 	}
 	.card-description {
 		padding-bottom: 20px;
@@ -488,13 +492,13 @@ $ABOUT
 
 .about-content-long {
 	margin-top: 10px;
-	text-align: center;
+	//text-align: center;
 	li {
 		position: relative;
 		display: inline;
 		padding: 5px 15px 0 15px;
 		color: $green;
-		font-size: 1.125em;
+		font-size: 1.5em;
 		font-weight: 700;
 		font-family: "kepler-std-display", Garamond, serif;
 		letter-spacing: 0.8px;
@@ -511,6 +515,9 @@ $ABOUT
 			}
 		}
 	}
+	&:first-child {
+		padding: 5px 15px 0 0;
+	}
 }
 
 @media (min-width: 768px) {
@@ -519,17 +526,19 @@ $ABOUT
 		border-style: solid;
 		border-width: 0 0 0 10px;
 	}
-	.about-content {font-size: 1.45em;}
+	.about-content {font-size: 1.5em;}
 }
 
 @media (min-width: 992px) {
+	#about-table {margin-top: 70px;}
 	.about-table {
 		width: 783.333px;
 		.about-card {
 			.about-content {font-size: 1.45em;}
 			.about-content-long li {
-				font-size: 1em;
+				font-size: 1.45em;
 				padding: 5px 5px 0 5px;
+				&:first-child { padding: 5px 5px 0 0; }
 			}
 		}
 	}
@@ -563,8 +572,9 @@ $ABOUT
 		.about-card { 
 			.about-content { font-size: 1.65em;}
 			.about-content-long li {
-				font-size: 20px;
+				font-size: 1.65em;
 				padding: 5px 10px 0 15px;
+				&:first-child { padding: 5px 10px 0 0; }
 			}
 		}
 	}
@@ -579,7 +589,9 @@ $OVERLAY
 
 */
 .project-header-img {
-	width: 100%;
+	margin-left: -15px;
+	width: 100vw;
+	@media (min-width:768px) { width:100%; margin: 0;}
 }
 
 .project-content {
@@ -602,9 +614,11 @@ $OVERLAY
 		p {font-size: 1em;}
 	}
 	.header-right {
-		text-align: center;
 		display: block;
 		width: 100%;
+		a {
+			font-family: "kepler-std-display", Garamond, serif;
+		}
 		h2 { 
 			font-size: 0.825em; 
 			color: $header_gray; 
@@ -720,7 +734,7 @@ $OVERLAY
 	right: 0;
 	left: 0;
 	visibility: hidden;
-	background-color: rgba(0, 0 , 0, 0.5);
+	background-color: rgba(0, 0 , 0, 0.85);
 	.overlay {
 		position: static; 
 		.project-overlay-row {
@@ -742,7 +756,6 @@ $OVERLAY
 			.header-title {font-size:3.0em;}
 		}
 		.header-right {
-			text-align: left;
 			display: block;
 			float: left;
 			width: 30%;

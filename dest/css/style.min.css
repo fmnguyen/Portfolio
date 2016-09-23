@@ -5496,8 +5496,8 @@ $NAVIGATION
       display: block;
       font-family: "niveau-grotesk", "Helvetica-Neue", Helvetica, sans-serif;
       font-weight: 700;
-      font-size: 12px;
-      color: #777;
+      font-size: 15px;
+      color: #ABA9B3;
       transition: all 0.2s ease;
       -moz-transition: all 0.2s ease;
       -o-transform: all 0.2s ease;
@@ -5562,16 +5562,14 @@ section {
       color: #2DB671;
       font-size: 15px;
       font-family: "niveau-grotesk", "Helvetica-Neue", Helvetica, sans-serif;
-      font-weight: 700;
-      opacity: 0.7; }
+      font-weight: 700; }
     .cover-wrapper .cover span {
       font-size: 30px;
       vertical-align: middle;
       color: #2DB671;
       letter-spacing: 2px;
       font-family: "kepler-std-display", Garamond, serif;
-      font-weight: 700;
-      opacity: 0.85; }
+      font-weight: 700; }
     .cover-wrapper .cover p, .cover-wrapper .cover span {
       background: linear-gradient(to right, #00b96a, #c3eac7);
       background-size: 200% 200%;
@@ -5629,14 +5627,21 @@ $PROJECTCARDS
 .project-row {
   margin-top: 10px;
   margin-bottom: 10px; }
+  @media (min-width: 768px) {
+    .project-row {
+      margin: 45px auto; } }
 
 .project-card {
   margin-top: 20px;
   margin-bottom: 20px; }
   .project-card a .card-title {
     margin-top: 8px;
-    font-size: 1.875em;
-    letter-spacing: 0.6px; }
+    margin-bottom: 3px;
+    font-size: 1.625em;
+    letter-spacing: 1.2px; }
+    @media (min-width: 768px) {
+      .project-card a .card-title {
+        font-size: 1.65em; } }
     .project-card a .card-title:hover, .project-card a .card-title:focus {
       color: rgba(45, 182, 113, 0.5); }
     .project-card a .card-title:focus {
@@ -5647,7 +5652,8 @@ $PROJECTCARDS
     font-family: "niveau-grotesk", 'Helvetica-Neue', Helvetica, sans-serif;
     font-weight: 700;
     letter-spacing: 0.8px;
-    color: #ABA9B3; }
+    color: #ABA9B3;
+    margin-bottom: 15px; }
   .project-card .card-description {
     padding-bottom: 20px; }
   .project-card .img-wrp {
@@ -5792,14 +5798,13 @@ $ABOUT
   background-size: contain; }
 
 .about-content-long {
-  margin-top: 10px;
-  text-align: center; }
+  margin-top: 10px; }
   .about-content-long li {
     position: relative;
     display: inline;
     padding: 5px 15px 0 15px;
     color: #2DB671;
-    font-size: 1.125em;
+    font-size: 1.5em;
     font-weight: 700;
     font-family: "kepler-std-display", Garamond, serif;
     letter-spacing: 0.8px; }
@@ -5813,6 +5818,8 @@ $ABOUT
         color: rgba(0, 185, 106, 0.6);
         text-decoration: none;
         cursor: pointer; }
+  .about-content-long:first-child {
+    padding: 5px 15px 0 0; }
 
 @media (min-width: 768px) {
   .right-about {
@@ -5820,16 +5827,20 @@ $ABOUT
     border-style: solid;
     border-width: 0 0 0 10px; }
   .about-content {
-    font-size: 1.45em; } }
+    font-size: 1.5em; } }
 
 @media (min-width: 992px) {
+  #about-table {
+    margin-top: 70px; }
   .about-table {
     width: 783.333px; }
     .about-table .about-card .about-content {
       font-size: 1.45em; }
     .about-table .about-card .about-content-long li {
-      font-size: 1em;
+      font-size: 1.45em;
       padding: 5px 5px 0 5px; }
+      .about-table .about-card .about-content-long li:first-child {
+        padding: 5px 5px 0 0; }
   .about-desc h1 {
     font-size: 1.25em;
     text-align: center; }
@@ -5854,8 +5865,10 @@ $ABOUT
     .about-table .about-card .about-content {
       font-size: 1.65em; }
     .about-table .about-card .about-content-long li {
-      font-size: 20px;
+      font-size: 1.65em;
       padding: 5px 10px 0 15px; }
+      .about-table .about-card .about-content-long li:first-child {
+        padding: 5px 10px 0 0; }
   .about-desc h1 {
     font-size: 1.5; } }
 
@@ -5865,7 +5878,12 @@ $OVERLAY
 
 */
 .project-header-img {
-  width: 100%; }
+  margin-left: -15px;
+  width: 100vw; }
+  @media (min-width: 768px) {
+    .project-header-img {
+      width: 100%;
+      margin: 0; } }
 
 .project-content {
   padding-bottom: 20px; }
@@ -5883,9 +5901,10 @@ $OVERLAY
     .project-content .header-left p {
       font-size: 1em; }
   .project-content .header-right {
-    text-align: center;
     display: block;
     width: 100%; }
+    .project-content .header-right a {
+      font-family: "kepler-std-display", Garamond, serif; }
     .project-content .header-right h2 {
       font-size: 0.825em;
       color: #ABA9B3;
@@ -5978,7 +5997,7 @@ $OVERLAY
   right: 0;
   left: 0;
   visibility: hidden;
-  background-color: rgba(0, 0, 0, 0.5); }
+  background-color: rgba(0, 0, 0, 0.85); }
   .overlay-fade .overlay {
     position: static; }
     .overlay-fade .overlay .project-overlay-row {
@@ -5994,7 +6013,6 @@ $OVERLAY
       .project-content .header-left .header-title {
         font-size: 3.0em; }
     .project-content .header-right {
-      text-align: left;
       display: block;
       float: left;
       width: 30%;

@@ -75,6 +75,10 @@ $(document).ready(function() {
         fadeOverlay();
     });
 
+    $('.overlay').click(function(e) {
+        
+    });
+
     /*
      * Toggles overlay off whenever 'esc' key is clicked
      */
