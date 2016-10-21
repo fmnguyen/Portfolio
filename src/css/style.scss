@@ -425,7 +425,8 @@ $ABOUT
 */
 .about-img-container {
 	position: relative;
-	background: url('../assets/images/sweaters.gif?+Math.random()') no-repeat;
+	background: url('../assets/images/sweaters.gif') no-repeat;
+	background-position: 40% 100%;
 	height: 300px;
 	width: 300px;
 	border-radius: 150px;
