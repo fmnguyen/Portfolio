@@ -5801,6 +5801,16 @@ $ABOUT
       width: 85px;
       margin-right: 0;
       margin-top: -75px; }
+    .about-row .about-card a {
+      text-decoration: none;
+      border-bottom: 1px dotted;
+      color: #2DB671;
+      font-family: "kepler-std-display", Garamond, serif;
+      letter-spacing: 0.8px; }
+      .about-row .about-card a:hover {
+        color: rgba(0, 185, 106, 0.6);
+        text-decoration: none;
+        cursor: pointer; }
   .about-row .about-large {
     height: 320px; }
 
@@ -5820,16 +5830,6 @@ $ABOUT
     font-weight: 700;
     font-family: "kepler-std-display", Garamond, serif;
     letter-spacing: 0.8px; }
-    .about-content-long li a {
-      text-decoration: none;
-      border-bottom: 1px dotted;
-      color: #2DB671;
-      font-family: "kepler-std-display", Garamond, serif;
-      letter-spacing: 0.8px; }
-      .about-content-long li a:hover {
-        color: rgba(0, 185, 106, 0.6);
-        text-decoration: none;
-        cursor: pointer; }
   .about-content-long:first-child {
     padding: 5px 15px 0 0; }
 
