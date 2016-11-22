@@ -49,7 +49,7 @@ b, strong {
 dfn {
   font-style: italic; }
 
-h1 {
+h1, .project-card a .card-title {
   font-size: 2em;
   margin: 0.67em 0; }
 
@@ -1087,22 +1087,22 @@ hr {
 [role="button"] {
   cursor: pointer; }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+h1, .project-card a .card-title, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
   color: inherit; }
 
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small, h1 .small, h2 .small, h3 .small, h4 .small, h5 .small, h6 .small, .h1 .small, .h2 .small, .h3 .small, .h4 .small, .h5 .small, .h6 .small {
+h1 small, .project-card a .card-title small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small, h1 .small, .project-card a .card-title .small, h2 .small, h3 .small, h4 .small, h5 .small, h6 .small, .h1 .small, .h2 .small, .h3 .small, .h4 .small, .h5 .small, .h6 .small {
   font-weight: normal;
   line-height: 1;
   color: #777; }
 
-h1, .h1, h2, .h2, h3, .h3 {
+h1, .project-card a .card-title, .h1, h2, .h2, h3, .h3 {
   margin-top: 20px;
   margin-bottom: 10px; }
 
-h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small, .h1 .small, h2 .small, .h2 .small, h3 .small, .h3 .small {
+h1 small, .project-card a .card-title small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small, .project-card a .card-title .small, .h1 .small, h2 .small, .h2 .small, h3 .small, .h3 .small {
   font-size: 65%; }
 
 h4, .h4, h5, .h5, h6, .h6 {
@@ -1112,7 +1112,7 @@ h4, .h4, h5, .h5, h6, .h6 {
 h4 small, .h4 small, h5 small, .h5 small, h6 small, .h6 small, h4 .small, .h4 .small, h5 .small, .h5 .small, h6 .small, .h6 .small {
   font-size: 75%; }
 
-h1, .h1 {
+h1, .project-card a .card-title, .h1 {
   font-size: 36px; }
 
 h2, .h2 {
@@ -3936,7 +3936,7 @@ a.badge:hover, a.badge:focus {
   color: inherit;
   background-color: #eee; }
 
-.jumbotron h1, .jumbotron .h1 {
+.jumbotron h1, .jumbotron .project-card a .card-title, .project-card a .jumbotron .card-title, .jumbotron .h1 {
   color: inherit; }
 
 .jumbotron p {
@@ -3960,7 +3960,7 @@ a.badge:hover, a.badge:focus {
   .container .jumbotron, .container-fluid .jumbotron {
     padding-left: 60px;
     padding-right: 60px; }
-  .jumbotron h1, .jumbotron .h1 {
+  .jumbotron h1, .jumbotron .project-card a .card-title, .project-card a .jumbotron .card-title, .jumbotron .h1 {
     font-size: 63px; } }
 
 .thumbnail {
@@ -5360,7 +5360,8 @@ button.close {
  * Reset.css
  */
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1,
+.project-card a .card-title, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -5408,14 +5409,14 @@ table {
 html {
   font-size: 100%; }
 
-h1, h2, h3, h4, h5, h6, p, a, li, div {
+h1, .project-card a .card-title, h2, h3, h4, h5, h6, p, a, li, div {
   font-family: "niveau-grotesk", Helvetica, Arial, sans-serif;
   color: #888; }
 
 i {
   font-style: italic; }
 
-h1 {
+h1, .project-card a .card-title {
   font-family: "kepler-std-display", Garamond, serif;
   color: #2DB671;
   font-size: 1.5em;
@@ -5468,14 +5469,14 @@ span {
   .clearfix:after, .nav-bar:after, .nav-bar .nav-bar-item:after, .row:after, .project-row:after, .project-content:after, .project-content .project-header:after, .project-info:after, .project-info .img-container:after, .overlay-fade:after, .overlay-fade .overlay .project-overlay-row:after {
     clear: both; }
 
-/* 
+/*
 
-$COLORS 
+$COLORS
 
 */
-/* 
+/*
 
-$NAVIGATION 
+$NAVIGATION
 	- .nav-bar
 	- #nav-cicle
 
@@ -5535,9 +5536,9 @@ $NAVIGATION
     float: right;
     padding-right: 20px; } }
 
-/* 
+/*
 
-$BODY 
+$BODY
 
 */
 .page-wrapper {
@@ -5735,7 +5736,7 @@ footer {
   .contact {
     margin-top: 3px; } }
 
-/* 
+/*
 
 $ABOUT
 
@@ -5743,7 +5744,7 @@ $ABOUT
 .about-img-container {
   position: relative;
   background: url("../assets/images/sweaters.gif") no-repeat;
-  background-position: 40% 100%;
+  background-position: 40% 0%;
   height: 300px;
   width: 300px;
   border-radius: 150px;
@@ -5762,11 +5763,22 @@ $ABOUT
             transform: translate(-50%, -50%);
     z-index: -1; }
 
-.about-desc h1 {
+.about-desc h1, .about-desc .project-card a .card-title, .project-card a .about-desc .card-title {
   font-size: 21px;
   text-align: center;
   font-family: "kepler-std-display", Garamond, serif;
   letter-spacing: 1.5px; }
+
+.about-content-a, .about-row .about-card .about-content a, .about-content-long li a {
+  text-decoration: none;
+  border-bottom: 1px dotted;
+  color: #2DB671;
+  font-family: "kepler-std-display", Garamond, serif;
+  letter-spacing: 0.8px; }
+  .about-content-a:hover, .about-row .about-card .about-content a:hover, .about-content-long li a:hover {
+    color: rgba(0, 185, 106, 0.6);
+    text-decoration: none;
+    cursor: pointer; }
 
 .about-row {
   margin-top: 35px; }
@@ -5820,16 +5832,8 @@ $ABOUT
     font-weight: 700;
     font-family: "kepler-std-display", Garamond, serif;
     letter-spacing: 0.8px; }
-    .about-content-long li a {
-      text-decoration: none;
-      border-bottom: 1px dotted;
-      color: #2DB671;
-      font-family: "kepler-std-display", Garamond, serif;
-      letter-spacing: 0.8px; }
-      .about-content-long li a:hover {
-        color: rgba(0, 185, 106, 0.6);
-        text-decoration: none;
-        cursor: pointer; }
+    .about-content-long li:first-child {
+      padding: 5px 15px 0 0; }
   .about-content-long:first-child {
     padding: 5px 15px 0 0; }
 
@@ -5845,7 +5849,7 @@ $ABOUT
   #about-table {
     margin-top: 70px; }
   .about-table {
-    width: 783.333px; }
+    width: 860px; }
     .about-table .about-card .about-content {
       font-size: 1.45em; }
     .about-table .about-card .about-content-long li {
@@ -5853,7 +5857,7 @@ $ABOUT
       padding: 5px 5px 0 5px; }
       .about-table .about-card .about-content-long li:first-child {
         padding: 5px 5px 0 0; }
-  .about-desc h1 {
+  .about-desc h1, .about-desc .project-card a .card-title, .project-card a .about-desc .card-title {
     font-size: 1.25em;
     text-align: center; }
   .right-about {
@@ -5881,11 +5885,11 @@ $ABOUT
       padding: 5px 10px 0 15px; }
       .about-table .about-card .about-content-long li:first-child {
         padding: 5px 10px 0 0; }
-  .about-desc h1 {
+  .about-desc h1, .about-desc .project-card a .card-title, .project-card a .about-desc .card-title {
     font-size: 1.5; } }
 
 /*
-	
+
 $OVERLAY
 
 */
@@ -5988,18 +5992,16 @@ $OVERLAY
   top: 0px;
   width: 50px;
   height: 50px;
-  border-radius: 25px;
-  background-color: #2DB671;
   margin-top: 19px;
   padding: 0; }
   #closecircle:hover {
     cursor: pointer; }
   #closecircle img {
-    width: 50%;
-    height: 50%;
+    width: 65%;
+    height: 65%;
     position: absolute;
-    left: 13px;
-    top: 12px; }
+    left: 9px;
+    top: 10px; }
 
 .overlay-fade {
   overflow-y: scroll;
@@ -6008,13 +6010,20 @@ $OVERLAY
   bottom: 0;
   right: 0;
   left: 0;
-  visibility: hidden;
-  background-color: rgba(0, 0, 0, 0.85); }
+  visibility: hidden; }
   .overlay-fade .overlay {
     position: static; }
     .overlay-fade .overlay .project-overlay-row {
       background-color: #fcfcfc;
       position: static; }
+
+.overlay-exit {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  position: fixed; }
 
 @media (min-width: 768px) {
   .project-content {
@@ -6044,7 +6053,7 @@ $OVERLAY
   .project-content .header-right h2 {
     font-size: 0.875em; } }
 
-/* 
+/*
 
 $ANIMATIONS
 	- animated

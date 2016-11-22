@@ -7,7 +7,7 @@ $(document).ready(function() {
 
     var first = false;
     toggleNavigation(false);
-       
+
     $(window).scroll(function() {
         $('.navigation-ul').removeClass('delay1 animated fadeIn');
         var scrollHeight = $(window).scrollTop();
@@ -24,7 +24,7 @@ $(document).ready(function() {
 
         /*
          * Adjusts active menu item based on scrollHeight from top
-         */  
+         */
         $('.nav-bar-item').each(function(event) {
             if (scrollHeight >= $($(this).children().attr('href')).offset().top - 70) {
                 $('.nav-bar-item').not(this).removeClass('nav-active');
@@ -36,7 +36,7 @@ $(document).ready(function() {
     $(window).resize(function() {
         if($('.navigation-ul').hasClass('nav-open'))
             $('.nav-circle').css('left', $('.nav-active').position().left + $('.nav-active').width() / 2 + 15)
-        else 
+        else
             $('.nav-circle').css('left', $(window).width() - 70);
     });
 
@@ -46,7 +46,7 @@ $(document).ready(function() {
     $('#circle').click(function(e) {
         if($('.navigation-ul').hasClass('nav-open'))
             toggleNavigation(true);
-        else 
+        else
             toggleNavigation(false);
     });
 
@@ -75,8 +75,8 @@ $(document).ready(function() {
         fadeOverlay();
     });
 
-    $('.overlay').click(function(e) {
-        
+    $('.overlay-exit').click(function(e) {
+        fadeOverlay();
     });
 
     /*
@@ -85,7 +85,7 @@ $(document).ready(function() {
     $(document).keyup(function(e) {
         if(e.which == 27 && $('.overlay-fade').hasClass('active'))
             fadeOverlay();
-    });  
+    });
 
     /*
      * Toggles project overlays on page from each link
@@ -108,7 +108,7 @@ $(document).ready(function() {
     if(viewPortWidth > 768)
         verticalCenter($('.header-left'),$('.project-header'));
 
-    /* 
+    /*
      * Toggles on an Overlay of the matching type
      * Obj: Javascript element of the section you want active
      */
@@ -142,7 +142,7 @@ $(document).ready(function() {
     }
 
     /*
-     * Fades project detial overlay on page 
+     * Fades project detial overlay on page
      */
     function fadeOverlay() {
         var href = '#' + $('.overlay').find('.active').attr('id');
@@ -152,11 +152,11 @@ $(document).ready(function() {
             .queue(function(next){
                 removeOverlay(href);
                 next();
-            });     
+            });
     }
 
     /*
-     * Removes project detial overlay on page 
+     * Removes project detial overlay on page
      */
     function removeOverlay(href) {
         $(href)
@@ -179,10 +179,10 @@ $(document).ready(function() {
             });
     }
 
-    /* 
+    /*
      * Opens or Closes navigation bar based on passed state
      * TRUE: Navigation bar is closed (because User is navigating page)
-     * FALSE: Navigation bar is open 
+     * FALSE: Navigation bar is open
      */
     function toggleNavigation(navigationState) {
         var navbar = $('.navigation-ul');
@@ -213,11 +213,11 @@ $(document).ready(function() {
                '-moz-border-radius': '5px'
             });
             $('.nav-circle').css('left', $('.nav-active').position().left + $('.nav-active').width() / 2 + 15)
-            
+
             // opaque background if not at top
-            if($(document).scrollTop() <= 20) 
+            if($(document).scrollTop() <= 20)
                 $('.nav-bar').css('background-color', 'rgba(255, 255, 255, 0.9)');
-            else 
+            else
                 $('.nav-bar').css('background-color', 'rgba(255, 255, 255, 0.9)');
         }
     }
@@ -225,8 +225,51 @@ $(document).ready(function() {
 });
 
 $(window).load(function() {
-    toggleNavigation(false);    
+    toggleNavigation(false);
 });
+
+/*
+ * Opens or Closes navigation bar based on passed state
+ * TRUE: Navigation bar is closed (because User is navigating page)
+ * FALSE: Navigation bar is open
+ */
+function toggleNavigation(navigationState) {
+    var navbar = $('.navigation-ul');
+    if(navigationState) {
+        navbar.removeClass('nav-open');
+        navbar.fadeOut('fast');
+
+        // Adjust circle location + size
+        $('#circle').css({
+           'border-radius': '25px',
+           'width': '50px',
+           'height': '50px',
+           '-webkit-border-radius': '50px',
+           '-moz-border-radius': '50px'
+        });
+        $('.nav-circle').css('left', $(window).width() - 70);
+        $('.nav-bar').css('background-color', 'rgba(255, 255, 255, 0.0)');
+    } else {
+        navbar.addClass('nav-open');
+        navbar.fadeIn('fast').css('display','inline-block');
+
+        // Adjust circle location + size
+        $('#circle').css({
+           'border-radius': '5px',
+           'width': '10px',
+           'height': '10px',
+           '-webkit-border-radius': '5x',
+           '-moz-border-radius': '5px'
+        });
+        $('.nav-circle').css('left', $('.nav-active').position().left + $('.nav-active').width() / 2 + 15)
+
+        // opaque background if not at top
+        if($(document).scrollTop() <= 20)
+            $('.nav-bar').css('background-color', 'rgba(255, 255, 255, 0.9)');
+        else
+            $('.nav-bar').css('background-color', 'rgba(255, 255, 255, 0.9)');
+    }
+}
 // Avoid `console` errors in browsers that lack a console.
 (function() {
     var method;

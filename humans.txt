@@ -7,7 +7,7 @@
 
 # THANKS
 
-    Holden Stegman, Alice Yan, Jessica Hullman, Denise Zhang, Marissa Ho, Julia Solano,
+    Holden Stegman, Alice Yan, Jessica Hullman, Denise Zhang, Marissa Ho
 
 # TECHNOLOGY COLOPHON
 

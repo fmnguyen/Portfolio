@@ -3,7 +3,7 @@ var $ = require('gulp-load-plugins')();
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync').create();
 
-var AUTOPREFIXER_BROWSERS = [    
+var AUTOPREFIXER_BROWSERS = [
     'ie >= 10',
     'ie_mob >= 10',
     'ff >= 30',
@@ -63,7 +63,7 @@ gulp.task('js', function(){
         .pipe(gulp.dest(dest.js))
         .pipe(browserSync.reload({stream: true}));
 
-    // ## Concats + uglifies vendor js files    
+    // ## Concats + uglifies vendor js files
     gulp.src(src.js_vendor)
         .pipe($.concat('vendor.min.js'))
         .pipe($.uglify())
@@ -124,5 +124,3 @@ gulp.task('watch', function() {
 gulp.task('default', function(cb){
     runSequence('env:dev', 'build', 'serve','watch', cb);
 })
-
-

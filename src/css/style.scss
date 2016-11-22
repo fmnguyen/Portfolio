@@ -50,9 +50,9 @@ body {
 	//background: url('../img/random-geom.png');
 }
 
-/* 
+/*
 
-$COLORS 
+$COLORS
 
 */
 $green: #2DB671;
@@ -65,9 +65,9 @@ $header_gray: #ABA9B3;
 $dark_gray: #ecf0f1;
 $darker_gray: #414141;
 
-/* 
+/*
 
-$NAVIGATION 
+$NAVIGATION
 	- .nav-bar
 	- #nav-cicle
 
@@ -108,8 +108,8 @@ $radius: 25px;
 
 			    transform: translate(0,-3px);
 			    -webkit-transform: translate(0,-3px);
-			    -o-transform: translate(0,-3px); 
-			    -moz-transform: translate(0,-3px); 
+			    -o-transform: translate(0,-3px);
+			    -moz-transform: translate(0,-3px);
 			}
 			&:focus {
 				text-decoration: underline;
@@ -155,9 +155,9 @@ $radius: 25px;
 	}
 }
 
-/* 
+/*
 
-$BODY 
+$BODY
 
 */
 
@@ -193,11 +193,11 @@ section {
 			color: $green;
 			letter-spacing: 2px;
 			font-family: "kepler-std-display", Garamond, serif;
-			font-weight: 700; 
+			font-weight: 700;
 			//opacity: 0.85;
 		}
 
-		// Gradient Animation behind text 
+		// Gradient Animation behind text
 		p, span {
 			background: -webkit-linear-gradient(to right, #00b96a, #c3eac7);
 			background: linear-gradient(to right, #00b96a, #c3eac7);
@@ -219,7 +219,7 @@ section {
 			    50%{background-position:100% 50%;}
 			    100%{background-position:0% 100%;}
 			}
-			@keyframes gradient { 
+			@keyframes gradient {
 			    0%{background-position:0% 0%;}
 			    50%{background-position:100% 50%;}
 			    100%{background-position:0% 100%;}
@@ -279,11 +279,12 @@ $PROJECTCARDS
 	margin-top: 20px;
 	margin-bottom: 20px;
 	a {
-		.card-title { 
-			margin-top: 8px; 
+		.card-title {
+			margin-top: 8px;
 			margin-bottom: 3px;
 			font-size: 1.625em;
 			letter-spacing: 1.2px;
+			@extend h1;
 			@media (min-width:768px) {font-size: 1.65em;}
 			&:hover, &:focus {
 				color: rgba(45,182,113, 0.5);
@@ -323,10 +324,10 @@ $PROJECTCARDS
 					opacity: 0.4;
     				filter: alpha(opacity=40);
 
-				    -webkit-transform:scale(1.05); // Safari and Chrome 
-				    -moz-transform:scale(1.05); // Firefox 
-				    -ms-transform:scale(1.05); // IE 9 
-				    -o-transform:scale(1.05); // Opera 
+				    -webkit-transform:scale(1.05); // Safari and Chrome
+				    -moz-transform:scale(1.05); // Firefox
+				    -ms-transform:scale(1.05); // IE 9
+				    -o-transform:scale(1.05); // Opera
 				    transform:scale(1.05);
 
     				transition: all 0.8s ease;
@@ -357,9 +358,9 @@ $FOOTER
 */
 
 footer {
-	outline-top: black solid;	
+	outline-top: black solid;
 	line-height: 2px;
-	margin-bottom: 20px; 
+	margin-bottom: 20px;
 }
 
 .socialmedia {
@@ -393,8 +394,8 @@ footer {
 			opacity: 1.0;
 		    transform: translate(0,-3px);
 		    -webkit-transform: translate(0,-3px);
-		    -o-transform: translate(0,-3px); 
-		    -moz-transform: translate(0,-3px); 
+		    -o-transform: translate(0,-3px);
+		    -moz-transform: translate(0,-3px);
 		}
 	}
 }
@@ -418,7 +419,7 @@ footer {
 	}
 }
 
-/* 
+/*
 
 $ABOUT
 
@@ -426,7 +427,7 @@ $ABOUT
 .about-img-container {
 	position: relative;
 	background: url('../assets/images/sweaters.gif') no-repeat;
-	background-position: 40% 100%;
+	background-position: 40% 0%;
 	height: 300px;
 	width: 300px;
 	border-radius: 150px;
@@ -458,13 +459,26 @@ $ABOUT
 	}
 }
 
+.about-content-a {
+	text-decoration: none;
+	border-bottom: 1px dotted;
+	color: #2DB671;
+	font-family: "kepler-std-display", Garamond, serif;
+	letter-spacing: 0.8px;
+	&:hover {
+		color: rgba(0, 185, 106, 0.6);
+		text-decoration: none;
+		cursor: pointer;
+	}
+}
+
 .about-row {
 	margin-top: 35px;
 	.about-card {
 		height: 100px;
 		padding: 18px;
 		margin-bottom: 5px;
-		margin-top: 5px; 
+		margin-top: 5px;
 		background: rgba(232, 232, 232, 0.3);
 		div {display: block;}
 		.about-caption {
@@ -484,6 +498,9 @@ $ABOUT
 			font-size: 1.5em;
 			font-family: "kepler-std-display", Garamond, serif;
 			letter-spacing: 1.7px;
+			a {
+				@extend .about-content-a;
+			}
 		}
 		.about-icon {
 			float: right;
@@ -507,27 +524,18 @@ $ABOUT
 
 .about-content-long {
 	margin-top: 10px;
-	//text-align: center;
 	li {
 		position: relative;
 		display: inline;
 		padding: 5px 15px 0 15px;
+		&:first-child{ padding: 5px 15px 0 0; }
 		color: $green;
 		font-size: 1.5em;
 		font-weight: 700;
 		font-family: "kepler-std-display", Garamond, serif;
 		letter-spacing: 0.8px;
 		a {
-			text-decoration: none;
-			border-bottom: 1px dotted;
-			color: #2DB671;
-			font-family: "kepler-std-display", Garamond, serif;
-			letter-spacing: 0.8px;
-			&:hover {
-				color: rgba(0, 185, 106, 0.6);
-				text-decoration: none;
-				cursor: pointer;
-			}
+			@extend .about-content-a;
 		}
 	}
 	&:first-child {
@@ -547,7 +555,7 @@ $ABOUT
 @media (min-width: 992px) {
 	#about-table {margin-top: 70px;}
 	.about-table {
-		width: 783.333px;
+		width: 860px;
 		.about-card {
 			.about-content {font-size: 1.45em;}
 			.about-content-long li {
@@ -572,7 +580,7 @@ $ABOUT
 	.about-large {
 		border-color: #FFF;
 		border-style: solid;
-		border-width: 0 10px 0 0;		
+		border-width: 0 10px 0 0;
 	}
 	.middle {
 		border-color: #FFF;
@@ -584,7 +592,7 @@ $ABOUT
 @media (min-width: 1200px) {
 	.about-table {
 		width: 1000px;
-		.about-card { 
+		.about-card {
 			.about-content { font-size: 1.65em;}
 			.about-content-long li {
 				font-size: 1.65em;
@@ -599,7 +607,7 @@ $ABOUT
 }
 
 /*
-	
+
 $OVERLAY
 
 */
@@ -634,12 +642,12 @@ $OVERLAY
 		a {
 			font-family: "kepler-std-display", Garamond, serif;
 		}
-		h2 { 
-			font-size: 0.825em; 
-			color: $header_gray; 
+		h2 {
+			font-size: 0.825em;
+			color: $header_gray;
 			text-transform: lowercase;
 		}
-		p { 
+		p {
 			font-family: "kepler-std-display", Garamond, serif;
 			letter-spacing: 0.8px;
 		}
@@ -724,19 +732,15 @@ $OVERLAY
 	top: 0px;
 	width: $radius * 2;
 	height: $radius * 2;
-	-webkit-border-radius: $radius;
-	-moz-border-radius: $radius;
-	border-radius: $radius;
-	background-color: $green;
 	margin-top: 19px;
 	padding: 0;
 	&:hover {cursor: pointer;}
 	img {
-		width: 50%;
-		height: 50%;
+		width: 65%;
+		height: 65%;
 		position: absolute;
-		left: 13px;
-		top: 12px;
+		left: 9px;
+		top: 10px;
 	}
 }
 
@@ -749,9 +753,9 @@ $OVERLAY
 	right: 0;
 	left: 0;
 	visibility: hidden;
-	background-color: rgba(0, 0 , 0, 0.85);
+	//background-color: rgba(0, 0 , 0, 0.85);
 	.overlay {
-		position: static; 
+		position: static;
 		.project-overlay-row {
 			@extend .clearfix;
 			background-color: $white;
@@ -761,13 +765,22 @@ $OVERLAY
 	}
 }
 
+.overlay-exit {
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0 , 0, 0.85);
+	position: fixed;
+}
+
 
 @media (min-width: 768px) {
 	.project-content {
 		padding: 40px;
 		.header-left {
 			float: left;
-			width: 70%; 
+			width: 70%;
 			.header-title {font-size:3.0em;}
 		}
 		.header-right {
@@ -776,7 +789,7 @@ $OVERLAY
 			width: 30%;
 			padding-top: 0px;
 			padding-left: 25px;
-			border-left: 1px dotted; 
+			border-left: 1px dotted;
 			h2 { font-size: 1em;}
 		}
 		.project-info {
@@ -803,7 +816,7 @@ $OVERLAY
 
 
 
-/* 
+/*
 
 $ANIMATIONS
 	- animated
