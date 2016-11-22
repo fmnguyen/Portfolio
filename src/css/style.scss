@@ -438,14 +438,11 @@ $ABOUT
 	.about-img {
 		position: absolute;
 		height: 100%;
-		//width: inherit;
 		clip-path: circle(300px at center);
 		-webkit-clip-path: circle(300px at 50% 50%);
 		left: 50%;
 		top: 50%;
 		transform: translate( -50%, -50%);
-		//width: 300px;
-		//height:300px;
 		z-index: -1;
 	}
 }
@@ -509,6 +506,18 @@ $ABOUT
 			width: 85px;
 			margin-right: 0;
 			margin-top: -75px;
+		}
+		a {
+			text-decoration: none;
+			border-bottom: 1px dotted;
+			color: #2DB671;
+			font-family: "kepler-std-display", Garamond, serif;
+			letter-spacing: 0.8px;
+			&:hover {
+				color: rgba(0, 185, 106, 0.6);
+				text-decoration: none;
+				cursor: pointer;
+			}
 		}
 	}
 	.about-large {
