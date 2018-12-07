@@ -17,66 +17,74 @@ var AUTOPREFIXER_BROWSERS = [
 
 // ### Sources / Destinations
 var src = {
-  js: 'src/js/*.js',
-  js_vendor: 'src/js/vendor/*.js',
-  scss: 'src/**/*.scss',
-  scss_index: 'src/css/style.scss',
-  img: 'img/**/**.**'
+    js: 'src/js/*.js',
+    js_vendor: 'src/js/vendor/*.js',
+    scss: 'src/**/*.scss',
+    scss_index: 'src/css/style.scss',
+    img: 'img/**/**.**'
 };
 var dest = {
-  js: 'dest/js',
-  css: 'dest/css',
-  img: 'dest/assets/images'
+    js: 'dest/js',
+    css: 'dest/css',
+    img: 'dest/assets/images'
 };
 
 // ## Environment
 var env = {
-  dev: function() {
-    return process.env.NODE_ENV === 'dev';
-  },
-  prod: function() {
-    return process.env.NODE_ENV === 'prod';
-  }
+    dev: function () {
+        return process.env.NODE_ENV === 'dev';
+    },
+    prod: function () {
+        return process.env.NODE_ENV === 'prod';
+    }
 };
 
 // checks for production environment for gulpif()
-gulp.task('env:dev', function(cb){
+gulp.task('env:dev', function (cb) {
     process.env.NODE_ENV = 'dev';
     cb(); /// ### this lets gulp know that this task is done
 })
 
-gulp.task('env:prod', function(cb){
+gulp.task('env:prod', function (cb) {
     process.env.NODE_ENV = 'prod';
     cb(); /// ### this lets gulp know that this task is done
 })
 
 // ## Subtasks (scripts, css, img)
-gulp.task('js', function(){
+gulp.task('js', function () {
     gulp.src(src.js)
         // .pipe($.jshint())  // can't be bothered with jshint-ing rn
         // .pipe($.jshint.reporter('default'))
-        .pipe($.if(env.dev(), $.sourcemaps.init({loadMaps: true})))
+        .pipe($.if(env.dev(), $.sourcemaps.init({
+            loadMaps: true
+        })))
         .pipe($.concat('main.js'))
         .pipe($.if(env.prod(), $.rename('main.min.js')))
         .pipe($.if(env.prod(), $.uglify()))
         .pipe($.if(env.dev(), $.sourcemaps.write('./')))
         .pipe(gulp.dest(dest.js))
-        .pipe(browserSync.reload({stream: true}));
+        .pipe(browserSync.reload({
+            stream: true
+        }));
 
     // ## Concats + uglifies vendor js files
     gulp.src(src.js_vendor)
         .pipe($.concat('vendor.min.js'))
         .pipe($.uglify())
         .pipe(gulp.dest(dest.js))
-        .pipe(browserSync.reload({stream: true}));
+        .pipe(browserSync.reload({
+            stream: true
+        }));
 })
 
-gulp.task('css', function() {
+gulp.task('css', function () {
     gulp.src(src.scss_index)
         .pipe($.if(env.dev(), $.plumber()))
         .pipe($.if(env.dev(), $.sourcemaps.init()))
         .pipe($.if(env.dev(), $.sass().on('error', $.sass.logError)))
-        .pipe($.if(env.prod(), $.sass({ outputStyle: 'compressed' })))
+        .pipe($.if(env.prod(), $.sass({
+            outputStyle: 'compressed'
+        })))
         .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
         .pipe($.if(env.prod(), $.cssnano()))
         .pipe($.rename('style.min.css'))
@@ -85,42 +93,42 @@ gulp.task('css', function() {
         .pipe(browserSync.stream());
 })
 
-gulp.task('img', function(){
+gulp.task('img', function () {
     gulp.src(src.img)
         .pipe($.imagemin())
         .pipe(gulp.dest(dest.img));
 })
 
-gulp.task('serve', function() {
-  browserSync.init({
-    ghostMode: false,
-    server: {
-      baseDir: './',
-      open: true
-    },
-    port: 3001
-  });
+gulp.task('serve', function () {
+    browserSync.init({
+        ghostMode: false,
+        server: {
+            baseDir: './',
+            open: true
+        },
+        port: 3001
+    });
 });
 
 // ## Main tasks
 
 // Build tasks
 gulp.task('build', ['js', 'css']);
-gulp.task('build:dev', function(cb) {
+gulp.task('build:dev', function (cb) {
     runSequence('env:dev', 'build', cb);
 });
-gulp.task('build:prod', function(cb) {
+gulp.task('build:prod', function (cb) {
     runSequence('env:prod', 'build', cb);
 });
 
 // Watch task
-gulp.task('watch', function() {
+gulp.task('watch', function () {
     gulp.watch(src.scss, ['css']);
     gulp.watch(src.js, ['js']);
     //gulp.watch(src.img, ['img']);
 })
 
 // Default tasks
-gulp.task('default', function(cb){
-    runSequence('env:dev', 'build', 'serve','watch', cb);
+gulp.task('default', function (cb) {
+    runSequence('env:dev', 'build', 'serve', 'watch', cb);
 })
