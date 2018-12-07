@@ -23,15 +23,15 @@
   },
   "homepage": "https://github.com/fmnguyen/Portfolio#readme",
   "devDependencies": {
-    "browser-sync": "^2.12.12",
+    "browser-sync": "^2.26.3",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-concat": "^2.6.0",
     "gulp-cssnano": "^2.1.2",
     "gulp-if": "^2.0.1",
     "gulp-imagemin": "^3.0.1",
-    "gulp-jshint": "^2.0.1",
-    "gulp-load-plugins": "^1.2.4",
+    "gulp-jshint": "^2.1.0",
+    "gulp-load-plugins": "^1.5.0",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.1",
@@ -39,5 +39,8 @@
     "gulp-uglify": "^1.5.3",
     "gulp-watch": "^4.3.6",
     "run-sequence": "^1.2.1"
+  },
+  "dependencies": {
+    "jshint": "^2.9.7"
   }
 }
