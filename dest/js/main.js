@@ -292,3 +292,5 @@ function toggleNavigation(navigationState) {
         }
     }
 }());
+
+//# sourceMappingURL=main.js.map
