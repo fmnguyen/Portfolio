@@ -51,7 +51,7 @@ gulp.task('env:prod', function (cb) {
 })
 
 // ## Subtasks (scripts, css, img)
-gulp.task('js', function () {
+gulp.task('js', function (cb) {
     gulp.src(src.js)
         // .pipe($.jshint())  // can't be bothered with jshint-ing rn
         // .pipe($.jshint.reporter('default'))
@@ -75,9 +75,11 @@ gulp.task('js', function () {
         .pipe(browserSync.reload({
             stream: true
         }));
+
+    cb();
 })
 
-gulp.task('css', function () {
+gulp.task('css', function (cb) {
     gulp.src(src.scss_index)
         .pipe($.if(env.dev(), $.plumber()))
         .pipe($.if(env.dev(), $.sourcemaps.init()))
@@ -91,6 +93,8 @@ gulp.task('css', function () {
         .pipe($.if(env.dev(), $.sourcemaps.write('./')))
         .pipe(gulp.dest(dest.css))
         .pipe(browserSync.stream());
+
+    cb();
 })
 
 gulp.task('img', function () {
@@ -113,22 +117,24 @@ gulp.task('serve', function () {
 // ## Main tasks
 
 // Build tasks
-gulp.task('build', ['js', 'css']);
-gulp.task('build:dev', function (cb) {
-    runSequence('env:dev', 'build', cb);
-});
-gulp.task('build:prod', function (cb) {
-    runSequence('env:prod', 'build', cb);
-});
+gulp.task('build', gulp.parallel('js', 'css'));
+
+gulp.task('build:dev', gulp.series('env:dev', 'build', function (cb) {
+    cb();
+}));
+
+gulp.task('build:prod', gulp.series('env:prod', 'build', function (cb) {
+    cb();
+}));
 
 // Watch task
-gulp.task('watch', function () {
+gulp.task('watch', function (cb) {
     gulp.watch(src.scss, ['css']);
     gulp.watch(src.js, ['js']);
     //gulp.watch(src.img, ['img']);
 })
 
 // Default tasks
-gulp.task('default', function (cb) {
-    runSequence('env:dev', 'build', 'serve', 'watch', cb);
-})
+gulp.task('default', gulp.series('env:dev', 'build', 'serve', 'watch', function (cb) {
+    cb();
+}));
